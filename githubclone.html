@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Repositories</title>
     <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/svg+xml" href="github-logo.svg">
 </head>
 <body>
 
@@ -19,20 +21,24 @@
         
             <input type="file" id="imageInput" style="display: none;" onchange="handleImageUpload(this)">
         </div>
-        
-    </header>
-    <div class="user-details">
-        <span id="userName">John Doe</span>
-        <div class="social-links">
-            <a href="https://www.instagram.com/" class="social-link" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/" class="social-link" target="_blank">LinkedIn</a>
+        <div class="user-details">
+            <span id="userName">John Doe</span>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <span id="userId">User123</span>
+            <span id="gender">He/Him</span>
+            <span id="bio">Software Developer</span>
+            <span id="followers"> 500</span>
+            <span id="following"> 200</span>
         </div>
-        <span id="userId">User123</span>
-        <span id="gender">He/Him</span>
-        <span id="bio">Software Developer</span>
-        <span id="followers">Followers: 500</span>
-        <span id="following">Following: 200</span>
-    </div>
+    </header>
+ 
 
     <section class="options-section">
         <label for="perPage">Repositories per page:</label>
@@ -47,6 +53,7 @@
             <input type="text" id="username" placeholder="Enter GitHub username">
             <button id="search-btn">Search</button>
         </div>
+        <br>
     </section>
 
     <section id="repositories" class="repositories-section"></section>
