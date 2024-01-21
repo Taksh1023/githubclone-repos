@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <header>
+        <h1>GitHub Repositories</h1>
+
+        <div class="profile-container">
+            <label for="imageInput">
+                <img id="avatarImage" src="images.png" alt="Avatar">
+                <span class="upload-icon">Upload</span>
+            </label>
+        
+            <input type="file" id="imageInput" style="display: none;" onchange="handleImageUpload(this)">
+        </div>
+        
+    </header>
+    <div class="user-details">
+        <span id="userName">John Doe</span>
+        <div class="social-links">
+            <a href="https://www.instagram.com/" class="social-link" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/" class="social-link" target="_blank">LinkedIn</a>
+        </div>
+        <span id="userId">User123</span>
+        <span id="gender">He/Him</span>
+        <span id="bio">Software Developer</span>
+        <span id="followers">Followers: 500</span>
+        <span id="following">Following: 200</span>
+    </div>
+
+    <section class="options-section">
+        <label for="perPage">Repositories per page:</label>
+        <select id="perPage" onchange="fetchRepositories()">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+
+        <div class="search">
+            <input type="text" id="username" placeholder="Enter GitHub username">
+            <button id="search-btn">Search</button>
+        </div>
+    </section>
+
+    <section id="repositories" class="repositories-section"></section>
+    <div id="pagination" class="pagination"></div>
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <script src="app1.js"></script>
+</body>
+</html>
