@@ -64,11 +64,13 @@ body {
 
 .pagination button {
     padding: 10px;
-    background-color: #3498db; /* Green button color */
-    color: #ffffff; /* White text color */
+    background-color: #3498db;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 29px;
     cursor: pointer;
+    height: 35px;
+    width: 35px;
 }
 #pagination button:hover {
     background-color: #1c49aa; /* Darker blue on hover */
@@ -87,6 +89,7 @@ body {
     width: 200px;
     height: 200px;
     overflow: hidden;
+    left: 48px;
 }
 
 #avatarImage {
@@ -171,4 +174,82 @@ body {
 
 #search-btn:active {
     background-color: #1c49aa; /* Even darker blue on click */
+}
+.user-details {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    color: #ffffff;
+    position: relative;
+    margin-left: 333px;
+    margin-top: -228px;
+    padding: 20px;
+    /* background-color: #333; */
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#userName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+#userId,
+#gender,
+#bio,
+#followers,
+#following {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#followers,
+#following {
+    font-weight: bold;
+}
+
+#followers::before,
+#following::before {
+    content: '|';
+    margin: 0 5px;
+}
+
+#followers::before {
+    content: 'Followers: ';
+}
+
+#following::before {
+    content: 'Following: ';
+}
+
+.social-links .fa {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #3498db; /* Blue color for icons */
+}
+
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#userName {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.social-links .fa:hover {
+    color: #1c49aa; /* Darker blue on hover */
+}
+.options-section
+{
+    position: relative;
+    margin-left: 52px;
 }
